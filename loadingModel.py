@@ -20,7 +20,7 @@ result=model(image) #inference
 
 bbox=result.pandas().xyxy[0]#.to_dict(orient='dict') #getting the coordinates of bounding boxes
 print(bbox)
-'''
+
 #storing the vertices of bounding boxes
 xmin=bbox['xmin'][0]
 ymin=bbox['ymin'][0]
@@ -55,7 +55,7 @@ pytesseract.pytesseract.tesseract_cmd = r"C:\Program Files\Tesseract-OCR\tessera
 ocr=pytesseract.image_to_string(thresh, config='--psm 6')
 print(ocr)
 
+
 #result.save()
 #result.show() #showing the result
 #crop = result.crop(save=True)
-'''
